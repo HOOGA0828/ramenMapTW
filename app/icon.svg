@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#c43d26" />
+  <circle cx="32" cy="32" r="24" fill="#fffaf0" opacity="0.16" />
+  <text
+    x="32"
+    y="39"
+    fill="#fffaf0"
+    font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif"
+    font-size="34"
+    font-weight="900"
+    text-anchor="middle"
+  >拉</text>
+</svg>

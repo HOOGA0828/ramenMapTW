@@ -1,0 +1,247 @@
+@import "../components/home/home.css";
+@import "../components/submit/submit.css";
+@import "../components/admin/admin.css";
+
+:root {
+  --bg: #faf4e8;
+  --paper: #fffaf0;
+  --paper-strong: #fff3dc;
+  --ink: #1f1b18;
+  --muted: #766b61;
+  --line: #e7d8c2;
+  --primary: #c43d26;
+  --primary-dark: #9d2f1d;
+  --accent: #e4772f;
+  --success: #247a4f;
+  --danger: #b3261e;
+  --shadow: 0 16px 48px rgba(61, 42, 26, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans TC",
+    "PingFang TC",
+    sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-shell:has(.map-page) {
+  display: grid;
+  height: 100vh;
+  min-height: 0;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.app-shell:has(.map-page) .demo-banner {
+  grid-row: 2;
+}
+
+.app-shell:has(.map-page) .map-page {
+  grid-row: 3;
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px clamp(16px, 3vw, 28px);
+  border-bottom: 1px solid rgba(231, 216, 194, 0.9);
+  background: rgba(250, 244, 232, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.brand-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fffaf0;
+  font-size: 18px;
+  box-shadow: 0 8px 18px rgba(196, 61, 38, 0.28);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links a,
+.ghost-link {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 13px;
+  background: rgba(255, 250, 240, 0.7);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button,
+.icon-button {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primary-button {
+  background: var(--primary);
+  color: white;
+}
+
+.secondary-button {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.danger-button {
+  background: var(--danger);
+  color: white;
+}
+
+.icon-button {
+  width: 38px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field label,
+.field-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.field input,
+.field textarea,
+.field select,
+.text-input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+  color: var(--ink);
+  outline: none;
+  padding: 10px 11px;
+}
+
+.field textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: var(--paper-strong);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.error-text {
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.success-text {
+  color: var(--success);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.maplibregl-popup-content {
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 720px) {
+  .top-nav {
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 14px;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .home-nav-links {
+    display: none;
+  }
+
+  .nav-links a {
+    flex: 1;
+    text-align: center;
+  }
+}
