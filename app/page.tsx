@@ -4,6 +4,8 @@ import { RamenMapExplorer } from "@/components/home/RamenMapExplorer";
 import { getMapStyle } from "@/lib/mapStyle";
 import { getPublicMapData } from "@/lib/shopQueries";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const { shops, usingDemoData } = await getPublicMapData();
 
