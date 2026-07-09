@@ -4,6 +4,9 @@ node_modules/
 # local agent workspace
 .agents/
 
+# local private project notes
+PROJECT_NOTES.local.md
+
 # Next.js / Vercel
 .next/
 .next-*/
