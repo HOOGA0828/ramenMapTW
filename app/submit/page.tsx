@@ -15,7 +15,6 @@ export default async function SubmitPage() {
         </Link>
         <nav className="nav-links" aria-label="主要導覽">
           <Link href="/">地圖</Link>
-          <Link href="/admin">後台</Link>
         </nav>
       </header>
       <SubmitShopForm styles={styles} />
